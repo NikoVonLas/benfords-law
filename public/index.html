@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Testing Benford's Law</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="An experiment to test Benford's Law against large, publicly available datasets." />
+        <meta name="author" content="Jason Long (@jasonlong), Bryce Thornton (@brycethornton) and Denis Nikolas (tg - @nikovonlas)" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <link href="/css/app.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--<script async defer data-domain="testingbenfordslaw.com" src="https://plausible.io/js/plausible.js"></script>-->
+    </head>
+
+    <body>
+        <div id="container">
+            <aside>
+                <h6 class="i18n" data-str="lang">Language</h6>
+                <span id="lang-wrapper">
+                    <select id="lang-options" class="select2-js">
+                        <option value="en" selected>English</option>
+                        <option value="ru">Русский</option>
+                    </select>
+                </span>
+
+                <h1 class="i18n" data-str="h1">Testing <b>Benford’s Law</b></h1>
+
+                <p class="i18n" data-str="imagine">Imagine a large dataset, say something like a list of every country and its population.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="i18n" data-str="country">Country</th>
+                            <th class="i18n" data-str="population">Population</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="i18n" data-str="afghanistan">Afghanistan</td>
+                            <td><em>2</em>9,117,000</td>
+                        </tr>
+                        <tr>
+                            <td class="i18n" data-str="albania">Albania</td>
+                            <td><em>3</em>,195,000</td>
+                        </tr>
+                        <tr>
+                            <td class="i18n" data-str="algeria">Algeria</td>
+                            <td><em>3</em>5,423,000</td>
+                        </tr>
+                        <tr>
+                            <td class="i18n" data-str="andorra">Andorra</td>
+                            <td><em>8</em>4,082</td>
+                        </tr>
+                        <tr>
+                            <td class="i18n" data-str="angola">Angola</td>
+                            <td><em>1</em>8,993,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&uarr; <span class="i18n" data-str="leading-digit">Leading digit</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <p class="i18n" data-str="explain">
+                    Chances are, the leading digit will be a <em>1</em> more often than
+                    a <em>2</em>. And <em>2</em>s would probably occur more often than
+                    <em>3</em>s, and so on.
+                </p>
+
+                <p class="i18n" data-str="benford-law">
+                    This odd phenomenon is Benford's Law. If a set of values were truly
+                    random, each leading digit would appear about <em>11%</em>
+                    of the time, but Benford's Law predicts a logarithmic distribution.
+                    It occurs so regularly that it is even used in fraudulent accounting
+                    detection.
+                </p>
+
+                <p class="i18n" data-str="wiki">See the <a href="http://en.wikipedia.org/wiki/Benfords_law">Wikipedia article</a> for a more thorough discussion.</p>
+
+                <p class="i18n" data-str="simple-experiment">This is a simple experiment to see how many large, publicly accessible datasets satisfy Benford’s Law.</p>
+
+                <p class="github i18n" data-str="github">This site is on GitHub. Please <a href="https://github.com/jasonlong/benfords-law">help out by forking
+                        the project and adding more datasets or translate project</a>.</p>
+
+                <footer>
+                    <dl id="credits">
+                        <dt class="i18n" data-str="jasonlong">Concept, Design, &amp; Frontend Development</dt>
+                        <dd><a href="https://twitter.com/jasonlong">@jasonlong (Twitter)</a></dd>
+
+                        <dt class="i18n" data-str="brycethornton">Frontend Development &amp; Data Crunching</dt>
+                        <dd><a href="https://twitter.com/brycethornton">@brycethornton (Twitter)</a></dd>
+
+                        <dt class="i18n" data-str="nikovonlas">Internalization, Frontend Development &amp; Data Crunching</dt>
+                        <dd><a href="https://t.me/nikovonlas">@nikovonlas (Telegram)</a></dd>
+                    </dl>
+                </footer>
+            </aside>
+
+            <section>
+                <h6 class="i18n" data-str="datasets">Available Datasets</h6>
+                <span id="dataset-wrapper"><select id="dataset-options" class="select2-js"></select></span>
+
+                <header>
+                    <h2 id="dataset-description"></h2>
+                </header>
+
+                <h6 class="i18n" data-str="lead-frequency">Leading digit frequency</h6>
+
+                <ol id="chart">
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                    <li><span class="fill" data-value="0"></span></li>
+                </ol>
+                <p id="benford-prediction"><b>▲</b> <span class="i18n" data-str="num-of-rec">Predicted by Benford's Law</span></p>
+
+                <table id="stats">
+                    <tr>
+                        <td class="i18n" data-str="num-of-rec">Number of Records</td>
+                        <td id="num-records"></td>
+                    </tr>
+                    <tr>
+                        <td class="i18n" data-str="min-val">Min Value</td>
+                        <td id="min-value"></td>
+                    </tr>
+                    <tr>
+                        <td class="i18n" data-str="max-val">Max Value</td>
+                        <td id="max-value"></td>
+                    </tr>
+                    <tr>
+                        <td class="i18n" data-str="orders">Orders of Magnitude</td>
+                        <td id="orders-of-magnitude"></td>
+                    </tr>
+                </table>
+
+                <h6 class="i18n" data-str="source">Data Source:</h6>
+                <p><a id="data-source" href="#"></a></p>
+
+            </section>
+        </div>
+
+        <script src="/js/app.js"></script>
+    </body>
+
+</html>

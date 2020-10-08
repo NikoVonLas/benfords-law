@@ -1,0 +1,29 @@
+{
+    "name": "benford-law-test",
+    "version": "1.0.0",
+    "description": "An experiment to test Benford's Law against large, publicly available datasets.",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "keywords": [],
+    "author": "Jason Long (@jasonlong), Bryce Thornton (@brycethornton) and Denis Nikolas (tg - @nikovonlas)",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/preset-env": "^7.11.5",
+        "Respond.js": "git+https://github.com/scottjehl/Respond.git",
+        "axios": "^0.20.0",
+        "compass-mixins": "^0.12.10",
+        "cross-env": "^7.0.2",
+        "css-reset-and-normalize": "^2.1.0",
+        "jquery": "^3.5.1",
+        "laravel-mix": "^5.0.6",
+        "roddeh-i18n": "^1.2.0",
+        "sass": "^1.27.0",
+        "sass-loader": "^8.0.2",
+        "select2": "^4.0.13",
+        "vue-template-compiler": "^2.6.12"
+    }
+}

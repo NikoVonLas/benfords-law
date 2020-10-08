@@ -1,0 +1,263 @@
+@import '~css-reset-and-normalize/scss/reset-and-normalize';
+@import '~select2';
+@import 'flat-theme-select2';
+
+$highlight_color: #d7ec33;
+$text_color: #8f8f8f;
+$link_color: #dcdcdc;
+$marker_color: #fe0086;
+$brighter_text_color: #d9d9d9;
+$golden_ratio_small: 38%;
+$golden_ratio_large: 62%;
+$gutter_size: 4%;
+
+body {
+    background: #232323 url("/images/bg/body.png") 0 0 repeat;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    color: $text_color;
+    font-size: 13px;
+    line-height: 1.4;
+    width: 90%;
+    margin: 3em auto;
+}
+
+#container {
+    overflow: hidden;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: $link_color;
+    text-decoration: none;
+    border-bottom: dotted 1px #555;
+    -webkit-transition-duration: 0.30s;
+    -webkit-transition-property: background-color, color;
+
+    &:hover {
+        color: #fff;
+        border-bottom: solid 1px #777;
+    }
+}
+
+em {
+    color: $brighter_text_color;
+}
+
+h1 {
+    color: #dcdcdc;
+    font-size: 3em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+
+    b {
+        color: $highlight_color;
+        display: block;
+    }
+}
+
+dl {
+    margin-top: 1em;
+
+    dd {
+        margin-bottom: 1em;
+    }
+}
+// sidebar
+
+aside {
+    float: left;
+    width: $golden_ratio_small - ($gutter_size / 2);
+
+    p.github {
+        background: transparent url("/images/octocat.png") 0 20% no-repeat;
+        padding-left: 1.7em;
+    }
+}
+
+footer {
+    margin-top: 2em;
+}
+// main section
+
+section {
+    float: right;
+    width: $golden_ratio_large - ($gutter_size / 2);
+
+    header {
+        min-height: 7em;
+        position: relative;
+
+        h2 {
+            font-size: 2.4em;
+            line-height: 0.9;
+            color: #fefefe;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+#lang-wrapper,
+#dataset-wrapper {
+    background: #202020;
+    background: rgba(25, 25, 25, 0.52);
+    padding: 0.3em;
+    margin-top: 0.3em;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+#lang-wrapper {
+    margin-bottom: 3.3em;
+}
+
+ol#chart {
+    margin-top: 0.4em;
+
+    li {
+        position: relative;
+        margin-bottom: 0.8em;
+        line-height: 2;
+
+        .digit {
+            position: absolute;
+            left: -1em;
+        }
+
+        .fill {
+            display: inline-block;
+            vertical-align: middle;
+            height: 2em;
+            background-color: $highlight_color;
+            margin-right: 0.5em;
+        }
+
+        b {
+            line-height: 1;
+            position: absolute;
+            bottom: -0.8em;
+            text-indent: -5px; // to center the pointer
+            font-family: "Helvetica Neue", arial, sans-serif;
+            font-size: 70%;
+            color: $marker_color;
+        }
+    }
+}
+
+p#benford-prediction {
+    text-align: right;
+    margin-top: -1.8em;
+    margin-bottom: 2.5em;
+
+    b {
+        font-size: 70%;
+        color: $marker_color;
+    }
+}
+
+table {
+    width: 100%;
+    background: #202020;
+    background: rgba(25, 25, 25, 0.52);
+    margin-bottom: 1em;
+
+    td,
+    th {
+        padding: 0.1em 1.5em;
+    }
+
+    thead {
+        th {
+            padding-top: 1em;
+        }
+    }
+
+    tfoot {
+        color: $highlight_color;
+
+        td {
+            padding-top: 0.5em;
+            padding-bottom: 1em;
+        }
+    }
+
+    th {
+        text-transform: uppercase;
+        color: $brighter_text_color;
+    }
+
+    em {
+        color: $brighter_text_color;
+        font-style: normal;
+    }
+}
+
+table#stats {
+    td {
+        padding: 0.2em 1.5em;
+    }
+
+    tr:first-child td {
+        padding-top: 1.5em;
+    }
+
+    tr:last-child td {
+        padding-bottom: 1.5em;
+    }
+
+    td:first-child {
+        width: 40%;
+    }
+
+    td:nth-child(2) {
+        color: $highlight_color;
+    }
+}
+
+@media screen and (max-width: 600px), screen and (max-device-width: 480px) {
+    html {
+        -ms-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    aside,
+    section {
+        float: none;
+        width: auto;
+        max-width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+
+    p#benford-prediction {
+        text-align: left;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #lang-wrapper,
+    #dataset-wrapper {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    body {
+        margin: 1em auto;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+}
+//iPhone 4, Opera Mobile 11 and other high pixel ratio devices -----------
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {}

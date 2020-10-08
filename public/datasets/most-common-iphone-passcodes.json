@@ -1,0 +1,17 @@
+{
+  "values": {
+    "1": 31.80,
+    "2": 17.56,
+    "3": 8.17,
+    "4": 7.35,
+    "5": 9.68,
+    "6": 6.17,
+    "7": 6.66,
+    "8": 6.71,
+    "9": 5.85
+  },
+  "num_records": "208,228",
+  "min_value": "1",
+  "max_value": "9,999",
+  "source": "http://www.amitay.us/blog/files/most_common_iphone_passcodes.php"
+}

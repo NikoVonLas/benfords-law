@@ -1,0 +1,17 @@
+{
+  "values": {
+    "1": 29.06,
+    "2": 18.07,
+    "3": 13.19,
+    "4": 9.79,
+    "5": 7.96,
+    "6": 6.75,
+    "7": 5.75,
+    "8": 5.04,
+    "9": 4.37
+  },
+  "num_records": "36,571",
+  "min_value": "1",
+  "max_value": "2,912,710",
+  "source": "https://www.kaggle.com/datasnaek/youtube-new"
+}

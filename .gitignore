@@ -1,5 +1,5 @@
 .sass-cache
 .DS_Store
 .ruby-version
-
 .vercel
+node_modules
