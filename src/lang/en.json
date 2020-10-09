@@ -17,9 +17,9 @@
         "leading-digit": "Leading digit",
         "explain": "Chances are, the leading digit will be a <em>1</em> more often than a <em>2</em>. And <em>2</em>s would probably occur more often than <em>3</em>s, and so on.",
         "benford-law": "This odd phenomenon is Benford's Law. If a set of values were truly random, each leading digit would appear about <em>11%</em> of the time, but Benford's Law predicts a logarithmic distribution. It occurs so regularly that it is even used in fraudulent accounting detection.",
-        "wiki": "See the <a href=\"http://en.wikipedia.org/wiki/Benfords_law\">Wikipedia article</a> for a more thorough discussion.",
+        "wiki": "See the <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Benfords_law\">Wikipedia article</a> for a more thorough discussion.",
         "simple-experiment": "This is a simple experiment to see how many large, publicly accessible datasets satisfy Benford’s Law.",
-        "github": "This site is on GitHub. Please <a href=\"https://github.com/jasonlong/benfords-law\">help out by forking the project and adding more datasets or translate project</a>.",
+        "github": "This site is on GitHub. Please <a target=\"_blank\" href=\"https://github.com/jasonlong/benfords-law\">help out by forking the project and adding more datasets or translate project</a>.",
 
         "jasonlong": "Concept, Design, &amp; Frontend Development",
         "brycethornton": "Frontend Development &amp; Data Crunching",
