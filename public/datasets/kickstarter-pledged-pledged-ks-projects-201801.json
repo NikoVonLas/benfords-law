@@ -1,0 +1,17 @@
+{
+  "values": {
+    "1": 32.49,
+    "2": 18.63,
+    "3": 12.1,
+    "4": 7.82,
+    "5": 10.41,
+    "6": 6.32,
+    "7": 5.08,
+    "8": 4.24,
+    "9": 2.91
+  },
+  "num_records": "326,134",
+  "min_value": "1",
+  "max_value": "20,338,986",
+  "source": "https://www.kaggle.com/kemical/kickstarter-projects"
+}
