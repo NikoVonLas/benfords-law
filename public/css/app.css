@@ -1359,14 +1359,14 @@ em {
 
 h1 {
   color: #dcdcdc;
-  font-size: 3em;
+  font-size: 2.4em;
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 0.4em;
 }
 h1 b {
   color: #d7ec33;
-  display: block;
+  white-space: nowrap;
 }
 
 dl {
@@ -1393,17 +1393,12 @@ section {
   float: right;
   width: 60%;
 }
-section header {
-  min-height: 7em;
-  position: relative;
-}
 section header h2 {
   font-size: 2.4em;
-  line-height: 0.9;
+  line-height: 1;
   color: #fefefe;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  position: absolute;
   bottom: 0;
 }
 
@@ -1419,7 +1414,7 @@ section header h2 {
 }
 
 #lang-wrapper {
-  margin-bottom: 3.3em;
+  margin-bottom: 1em;
 }
 
 ol#chart {
@@ -1533,6 +1528,17 @@ section {
   #lang-wrapper,
 #dataset-wrapper {
     width: 100%;
+  }
+
+  ol#chart {
+    margin-left: 15px;
+  }
+
+  table#stats td:first-child {
+    width: 60%;
+  }
+  table#stats td:nth-child(2) {
+    text-align: right;
   }
 }
 @media screen and (max-width: 480px) {

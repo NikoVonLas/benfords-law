@@ -23230,8 +23230,8 @@ window.getOrdersOfMagnitudeBetween = function (min, max) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Desktop\benfords-law\src\js\app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! D:\Desktop\benfords-law\src\sass\app.scss */"./src/sass/app.scss");
+__webpack_require__(/*! D:\Desktop\CurrentWorks\benfords-law\src\js\app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! D:\Desktop\CurrentWorks\benfords-law\src\sass\app.scss */"./src/sass/app.scss");
 
 
 /***/ })

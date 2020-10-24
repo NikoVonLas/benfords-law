@@ -48,14 +48,14 @@ em {
 
 h1 {
     color: #dcdcdc;
-    font-size: 3em;
+    font-size: 2.4em;
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 0.4em;
 
     b {
         color: $highlight_color;
-        display: block;
+        white-space: nowrap;
     }
 }
 
@@ -88,16 +88,12 @@ section {
     width: $golden_ratio_large - ($gutter_size / 2);
 
     header {
-        min-height: 7em;
-        position: relative;
-
         h2 {
             font-size: 2.4em;
-            line-height: 0.9;
+            line-height: 1;
             color: #fefefe;
             margin-top: 0.5em;
             margin-bottom: 0.5em;
-            position: absolute;
             bottom: 0;
         }
     }
@@ -115,7 +111,7 @@ section {
 }
 
 #lang-wrapper {
-    margin-bottom: 3.3em;
+    margin-bottom: 1em;
 }
 
 ol#chart {
@@ -248,6 +244,19 @@ table#stats {
     #lang-wrapper,
     #dataset-wrapper {
         width: 100%;
+    }
+
+    ol#chart {
+        margin-left: 15px;
+    }
+
+    table#stats {
+        td:first-child {
+            width: 60%;
+        }
+        td:nth-child(2) {
+            text-align: right;
+        }
     }
 }
 @media screen and (max-width: 480px) {
